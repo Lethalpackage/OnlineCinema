@@ -1,4 +1,5 @@
 package com.example.onlinecinema.features.moviesListScreen.ui
+
 import com.example.onlinecinema.base.BaseViewModel
 import com.example.onlinecinema.base.Event
 import com.example.onlinecinema.features.filmCard.ui.MovieInfoScreen

@@ -1,14 +1,23 @@
 package com.example.onlinecinema.features.filmCard.ui
 
 import android.os.Bundle
+import android.view.KeyCharacterMap.load
+import android.view.PointerIcon.load
+
 import android.view.View
 import androidx.core.os.bundleOf
+
 import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.bumptech.glide.Glide
 import com.example.onlinecinema.R
 import com.example.onlinecinema.databinding.FragmentFilmCardBinding
 import com.example.onlinecinema.features.moviesListScreen.domain.model.FilmsDomainModel
+
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
+
+
 
 class FilmCardFragment(): Fragment(R.layout.fragment_film_card) {
 
@@ -33,8 +42,10 @@ class FilmCardFragment(): Fragment(R.layout.fragment_film_card) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
-            tvTitle.text = movie.title
-            btnPlay.setOnClickListener {
+            tvMovieTitle.text = movie.title
+            tvMovieOverview.text = movie.overview
+            tvMovieReleaseDate.text = movie.releaseDate
+            bWatchMovie.setOnClickListener {
                 viewModel.processUiEvent(UiEvent.OnPlayClicked(movie.video))
             }
         }

@@ -22,12 +22,12 @@ class FilmsListAdapter(
         var layoutMovie: ConstraintLayout = view.findViewById(R.id.layoutMovie)
         var tvTitle: TextView = view.findViewById(R.id.tvTitle)
         var tvOverview: TextView = view.findViewById(R.id.tvOverview)
-        var ivPreview: ImageView = view.findViewById(R.id.ivPreview)
+        var ivPreview: ImageView = view.findViewById(R.id.moviePoster)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesListViewHolder {
         val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_movie, parent, false)
+            .inflate(R.layout.item_films, parent, false)
         return MoviesListViewHolder(itemView)
     }
 
@@ -55,3 +55,4 @@ class FilmsListAdapter(
         this.moviesList.addAll(list)
         notifyDataSetChanged()
     }
+}

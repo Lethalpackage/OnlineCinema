@@ -7,8 +7,8 @@ import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 
 
-
-class FilmsListInteractor(    private val cinemaRepo: FilmsRepo
+class FilmsListInteractor(
+    private val cinemaRepo: FilmsRepo
 ) {
 
     suspend fun getFilmsList() = attempt {
